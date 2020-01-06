@@ -1,0 +1,39 @@
+:root {
+  --image-size: 500px;
+  --image-divisons: 5;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#container {
+  height: var(--image-size);
+  width: var(--image-size);
+}
+
+#container::before {
+  content: "";
+  background-image: url(./monks.jpg);
+  opacity: 0.5;
+  position: absolute;
+  height: var(--image-size);
+  width: var(--image-size);
+  z-index: -1;
+}
+
+.tile {
+  width: calc( var(--image-size)/ var(--image-divisons));
+  height: calc( var(--image-size)/ var(--image-divisons));
+  background-image: url(./monks.jpg);
+  float: left;
+  color: white
+}
+
+button {
+  font-weight: bold;
+}
