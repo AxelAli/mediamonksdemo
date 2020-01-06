@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const divisions = 5;
+const divisions = 4;
 const imageSize = 500;
 const winningCondition = [...Array(divisions * divisions)].map((_, i) => i);
 
